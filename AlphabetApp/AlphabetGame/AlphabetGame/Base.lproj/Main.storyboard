@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mQc-SU-dL2">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start ScreenVC-->
+        <scene sceneID="PjX-eU-drY">
+            <objects>
+                <viewController id="mQc-SU-dL2" customClass="StartScreenVC" customModule="AlphabetGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SfZ-z7-PAY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="letter blocks.jpg" highlightedImage="letter blocks.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dGQ-xa-fwu">
+                                <rect key="frame" x="10" y="78" width="294" height="340"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="WS6-CW-rfH"/>
+                                    <constraint firstAttribute="width" constant="294" id="vWQ-w4-62G"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qS-GF-QSK">
+                                <rect key="frame" x="93" y="458" width="121" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="CWl-DX-FHY"/>
+                                    <constraint firstAttribute="width" constant="121" id="h2J-yG-7Z7"/>
+                                </constraints>
+                                <state key="normal" title="Let's Get Started!">
+                                    <color key="titleColor" red="0.15571389922009998" green="0.89072619818652854" blue="0.10461101215264529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="uW5-pw-DOx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dGQ-xa-fwu" firstAttribute="top" secondItem="6ja-Wq-ZNE" secondAttribute="top" constant="58" id="FsA-Ia-nkn"/>
+                            <constraint firstItem="4qS-GF-QSK" firstAttribute="top" secondItem="dGQ-xa-fwu" secondAttribute="bottom" constant="40" id="LzR-ud-Ekf"/>
+                            <constraint firstItem="4qS-GF-QSK" firstAttribute="leading" secondItem="6ja-Wq-ZNE" secondAttribute="leading" constant="93" id="PDx-Pp-l1t"/>
+                            <constraint firstItem="dGQ-xa-fwu" firstAttribute="leading" secondItem="6ja-Wq-ZNE" secondAttribute="leading" constant="10" id="a7R-Dq-anE"/>
+                            <constraint firstItem="6ja-Wq-ZNE" firstAttribute="trailing" secondItem="dGQ-xa-fwu" secondAttribute="trailing" constant="16" id="iaX-Ox-K56"/>
+                            <constraint firstItem="6ja-Wq-ZNE" firstAttribute="trailing" secondItem="4qS-GF-QSK" secondAttribute="trailing" constant="106" id="ibA-CY-fWo"/>
+                            <constraint firstItem="4qS-GF-QSK" firstAttribute="centerX" secondItem="dGQ-xa-fwu" secondAttribute="centerX" id="sEg-Pv-DLh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6ja-Wq-ZNE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2aI-oC-FUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-965.625" y="73.943661971830991"/>
+        </scene>
+        <!--Letters Screen-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="LettersScreen" customModule="AlphabetGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </arscnView>
+                    <connections>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="letter blocks.jpg" width="1000" height="1000"/>
+    </resources>
+</document>
